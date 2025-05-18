@@ -1,0 +1,11 @@
+streamlit
+pandas
+numpy
+networkx
+scikit-learn
+sentence-transformers
+plotly
+matplotlib
+bokeh
+streamlit-bokeh
+scipy
