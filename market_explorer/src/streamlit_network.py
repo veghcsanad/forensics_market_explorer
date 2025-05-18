@@ -51,7 +51,7 @@ def process_data(file):
 
     grouped = df.groupby("seller").agg({
         "Strain": lambda x: ', '.join(set(str(i) for i in x if pd.notnull(i))),
-        "Description": lambda x: ' '.join(set(str(i) for i in x if pd.notnull(i))),
+        "name": lambda x: ' '.join(set(str(i) for i in x if pd.notnull(i))),
         "price_in_eur": list,
         "destination": lambda x: ', '.join(set(str(i) for i in x if pd.notnull(i))),
         "Effects": lambda x: ', '.join(set(str(i) for i in x if pd.notnull(i))),
@@ -59,10 +59,11 @@ def process_data(file):
     }).reset_index()
     grouped["price_in_eur"] = grouped["price_in_eur"].apply(
         lambda x: [
-            float(str(i).replace(' ', '').replace(',', '.'))
+            round(float(str(i).replace(' ', '').replace(',', '.')), 2)
             for i in x if pd.notnull(i)
         ]
     )
+    grouped = grouped.rename(columns={"name": "Description"})
     return grouped
 
 def similarity_weights_sidebar():
