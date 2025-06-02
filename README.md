@@ -29,8 +29,3 @@ python -m streamlit run src/streamlit_network.py
 This will launch the Market Explorer interface, where you can load datasets and begin your analysis.
 
 upload the dataset called combined_final from the data folder to the website. 
-## Contributing
-Contributions are welcome! Please fork the repository and submit a pull request. For major changes, open an issue first to discuss your ideas.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
