@@ -8,7 +8,7 @@ To get started with Market Explorer, follow these steps:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/forensics_market_explorer.git
+   git clone https://github.com/veghcsanad/forensics_market_explorer.git
    ```
 
 2. Navigate to the project directory:
